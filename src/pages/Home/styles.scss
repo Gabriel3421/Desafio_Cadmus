@@ -1,0 +1,75 @@
+@import "../../variables";
+
+.home-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../../assets/background_body.svg");
+  height: 100vh;
+  background-size: cover;
+  color: $white;
+  &__loading {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      color: $white;
+      font-weight: 700;
+      font-size: 60px;
+    }
+  }
+  &__logo {
+    width: 600px;
+    align-self: center;
+  }
+  &__content {
+    width: 90%;
+    align-self: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    &__options {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+    }
+    &__footer {
+      margin: 0 10px 10px 10px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      border-top: 2px solid $gray;
+      padding-top: 10px;
+      &__status {
+        display: flex;
+        align-items: center;
+        > span {
+          font-size: 36px;
+          font-weight: 700;
+          margin-right: 10px;
+        }
+        > div {
+          display: flex;
+          flex-direction: column;
+          span {
+            font-size: 13px;
+            font-weight: 300;
+          }
+          span + span {
+            color: $green;
+            margin-top: 5px;
+            font-weight: 400;
+          }
+        }
+      }
+      &__separator {
+        height: 40px;
+        border-left: 1px solid $gray;
+        margin: 0 15px;
+      }
+    }
+  }
+}

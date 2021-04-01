@@ -1,9 +1,10 @@
-
+import { Home } from './pages/Home';
+import { AppProvider } from './context/AppContext'
 function App() {
   return (
-    <div className="App">
-      <h1>teste</h1>
-    </div>
+    <AppProvider>
+      <Home />
+    </AppProvider>
   );
 }
 
