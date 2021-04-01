@@ -39,7 +39,7 @@ por imagem.
 ## Construido com
 
 - [ReactJS](https://reactjs.org/docs/getting-started.html) - framework utilizado
-- [Saas](https://sass-lang.com/) - Pre-processador de css
+- [Scss](https://sass-lang.com/) - Pre-processador de css
 
 ## Authors
 
