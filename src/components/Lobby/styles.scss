@@ -1,0 +1,32 @@
+@import "../../variables";
+
+.lobby-container {
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  width: 100%;
+  padding: 15px;
+  color: white;
+  padding: 10px;
+  border-left: 1px solid $gray;
+  border-right: 1px solid $gray;
+  header {
+    display: flex;
+    justify-content: flex-start;
+    height: 42px;
+    > span {
+      padding-top: 20px;
+      padding-left: 5px;
+      height: fit-content;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+  }
+  section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+  }
+}

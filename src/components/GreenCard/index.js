@@ -1,12 +1,11 @@
-import React, { useContext } from 'react';
-import { AppContext } from '../../context/AppContext'
-import logo from '../../assets/logo.svg';
+import React from 'react';
 import "./styles.scss";
 
-export function GreenCard() {
+export function GreenCard({ quantity }) {
   return (
-    <main className="header-container">
-      <h1>GreenCard</h1>
+    <main className="greencard-container">
+      <span className="greencard-container__number">{quantity}</span>
+      <span>VITÓRIAS</span>
     </main>
   );
 }

@@ -1,12 +1,11 @@
-import React, { useContext } from 'react';
-import { AppContext } from '../../context/AppContext'
-import logo from '../../assets/logo.svg';
+import React from 'react';
 import "./styles.scss";
 
-export function RedCard() {
+export function RedCard({ quantity }) {
   return (
-    <main className="header-container">
-      <h1>RedCard</h1>
+    <main className="redcard-container">
+      <span className="redcard-container__number">{quantity}</span>
+      <span>DERROTAS</span>
     </main>
   );
 }

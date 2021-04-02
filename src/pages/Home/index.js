@@ -1,6 +1,9 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../../context/AppContext';
 import { Header } from '../../components/Header';
+import { Lobby } from '../../components/Lobby';
+import { Ranked } from '../../components/Ranked';
+import { Game } from '../../components/Game';
 import logo from '../../assets/logo.svg';
 import "./styles.scss";
 
@@ -21,9 +24,9 @@ export function Home() {
       <section className="home-container__content">
         <Header />
         <section className="home-container__content__options">
-          <h1>jogo rapido</h1>
-          <h1>lobby</h1>
-          <h1>ranked</h1>
+          <Game />
+          <Lobby />
+          <Ranked />
         </section>
         <footer className="home-container__content__footer">
           <div className="home-container__content__footer__status">

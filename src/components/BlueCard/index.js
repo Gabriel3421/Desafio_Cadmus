@@ -1,12 +1,11 @@
-import React, { useContext } from 'react';
-import { AppContext } from '../../context/AppContext'
-import logo from '../../assets/logo.svg';
+import React from 'react';
 import "./styles.scss";
 
-export function BlueCard() {
+export function BlueCard({ quantity }) {
   return (
-    <main className="header-container">
-      <h1>BlueCard</h1>
+    <main className="bluecard-container">
+      <span className="bluecard-container__number">{quantity}</span>
+      <span>PARTIDAS</span>
     </main>
   );
 }

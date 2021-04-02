@@ -3,12 +3,23 @@ import axios from 'axios';
 export const AppContext = createContext();
 
 export function AppProvider({ children }) {
+  const userInitialData = {
+    email: 'fulano@gmail.com',
+    name: 'Fulano de Souza',
+    id: -1,
+    experience: 0,
+    maxExperience: 1,
+    matches: [
+      { victory: 0, defeat: 0, button: { icon: "", title: "", link: "" } },
+      { victory: 0, defeat: 0, button: { icon: "", title: "", link: "" } },
+    ]
+  }
   const [loading, setLoading] = useState(true)
-  const [user, setUser] = useState()
+  const [user, setUser] = useState(userInitialData)
   const [levels, setLevels] = useState(0)
-  const [online, setOnline] = useState()
+  const [online, setOnline] = useState(0)
   const [bans, setBans] = useState(0)
-  const [roms, setRoms] = useState()
+  const [roms, setRoms] = useState([])
   useEffect(() => {
     async function getData() {
       try {

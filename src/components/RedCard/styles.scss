@@ -1,12 +1,19 @@
 @import "../../variables";
 
-.header-container {
+.redcard-container {
   display: flex;
-  flex-direction: row;
-  background-color: rgba($gray, 0.5);
+  flex-direction: column;
   height: 100px;
-  width: 100%;
-  border-radius: 10px;
-  padding: 15px;
+  width: 110px;
+  border-radius: 5px;
   color: white;
+  background-color: $red;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  padding: 0 18px;
+  &__number {
+    font-weight: 700;
+    align-self: flex-start;
+  }
 }

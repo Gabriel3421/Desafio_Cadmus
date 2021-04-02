@@ -9,4 +9,88 @@
   border-radius: 10px;
   padding: 15px;
   color: white;
+
+  &__user-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 25px;
+    img {
+      border-radius: 50%;
+      border: 2px solid $green;
+      margin-right: 10px;
+    }
+    &__name {
+      font-weight: 700;
+      align-self: flex-start;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      span {
+        max-width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+  &__exp {
+    width: 670px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__bar-container {
+      width: 100%;
+      background-color: $white;
+      height: 15px;
+      border-radius: 15px;
+      &__xp {
+        background: linear-gradient(90deg, $blue, $green);
+        height: 15px;
+        border-radius: 15px;
+        z-index: 1;
+      }
+    }
+    &__top-labels {
+      width: 100%;
+      display: flex;
+      div {
+        span {
+          font-size: 14px;
+          margin-left: 5px;
+        }
+      }
+      div:first-child {
+        margin-left: 3%;
+      }
+
+      div:last-child {
+        margin-left: 56%;
+      }
+    }
+    &__bottom-labels {
+      width: 100%;
+      display: flex;
+      img {
+        transform: rotate(180deg);
+      }
+      div {
+        span {
+          font-size: 14px;
+          margin-right: 5px;
+        }
+      }
+      div:first-child {
+        margin-left: 23%;
+      }
+
+      div:last-child {
+        margin-left: 60%;
+      }
+    }
+  }
 }

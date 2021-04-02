@@ -1,0 +1,19 @@
+@import "../../variables";
+
+.button-container {
+  display: flex;
+  background-color: $green;
+  height: 40px;
+  width: 100%;
+  border-radius: 5px;
+  padding: 15px;
+  color: white;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  > span {
+    padding: 0 5px;
+    border-right: 1px solid $white;
+    margin-right: 5px;
+  }
+}
