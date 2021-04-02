@@ -1,4 +1,4 @@
-import React, { useContext, useMemo } from 'react';
+import React, { useContext, useEffect, useMemo, useState } from 'react';
 import { AppContext } from '../../context/AppContext'
 import pin from '../../assets/pin.svg';
 import profile from '../../assets/profile.svg';
@@ -6,8 +6,14 @@ import "./styles.scss";
 
 export function Header() {
   const { user } = useContext(AppContext);
-  const widthExperienceBar = 670;
-  const xp = useMemo(() => user.experience * widthExperienceBar / user.maxExperience, [user.experience, user.maxExperience]);
+  const [tela, setTela] = useState(window.innerWidth);
+  useEffect(() => {
+    window.addEventListener('resize', () => {
+      setTela(window.innerWidth)
+    })
+  }, []);
+  const widthExperienceBar = tela > 900 ? 670 : 500;
+  const xp = useMemo(() => user.experience * widthExperienceBar / user.maxExperience, [user.experience, user.maxExperience, widthExperienceBar]);
   return (
     <main className="header-container">
       <section className="header-container__user-data">

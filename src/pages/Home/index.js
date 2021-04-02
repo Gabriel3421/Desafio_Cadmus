@@ -4,7 +4,7 @@ import { Header } from '../../components/Header';
 import { Lobby } from '../../components/Lobby';
 import { Ranked } from '../../components/Ranked';
 import { Game } from '../../components/Game';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/logo.png';
 import "./styles.scss";
 
 export function Home() {
@@ -15,7 +15,11 @@ export function Home() {
       {
         loading && (
           <section className="home-container__loading">
-            <h1>Carregando...</h1>
+            <h1>Carregando</h1>
+            <div className="home-container__loading__animation1">.</div>
+            <div className="home-container__loading__animation2">.</div>
+            <div className="home-container__loading__animation3">.</div>
+
           </section>
         )
       }
